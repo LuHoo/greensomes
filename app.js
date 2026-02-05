@@ -158,6 +158,7 @@ function deriveSinglesOrder(pairs) {
   return { singles, captainChoices };
 }
 
+/*
 // -------------------------
 // 5. Pipeline voorbeeld
 // -------------------------
