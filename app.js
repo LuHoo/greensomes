@@ -157,33 +157,4 @@ function deriveSinglesOrder(pairs) {
   return { singles, captainChoices };
 }
 
-/*
-// -------------------------
-// 5. Pipeline voorbeeld
-// -------------------------
 
-// voorbeeldteam
-const players = [
-  new Player("A", "A", 6),
-  new Player("B", "B", 8),
-  new Player("C", "C", 8),
-  new Player("D", "D", 12),
-  new Player("E", "E", 13),
-  new Player("F", "F", 15),
-];
-
-const allPairings = generateAllGreensomePairings(players);
-const validPairings = allPairings.filter(pairs => isValidGreensomeSetup(players, pairs));
-
-console.log("Aantal geldige opstellingen:", validPairings.length);
-
-validPairings.forEach((pairs, idx) => {
-  const { singles, captainChoices } = deriveSinglesOrder(pairs);
-  console.log(`Opstelling ${idx + 1}:`);
-  console.log(pairs.map(p => p.players.map(pl => pl.name)));
-  console.log("Singles:", singles.map(p => p.name));
-  if (captainChoices.length) {
-    console.log("Captain kan kiezen bij gelijke PH:", captainChoices);
-  }
-});
-*/
