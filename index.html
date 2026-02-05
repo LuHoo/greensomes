@@ -2,17 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Greensomes Advisor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Greensomes Pairing Generator</title>
+  <style>
+    body { font-family: Arial; margin: 30px; max-width: 900px; }
+    .hidden { display: none; }
+    .player-row { display: flex; gap: 10px; margin-bottom: 8px; }
+    input[type="number"] { width: 80px; }
+    button { padding: 8px 16px; margin-top: 10px; cursor: pointer; }
+    .result-block {
+      border: 1px solid #ccc; padding: 12px; margin-bottom: 15px; border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Greensomes Advisor</h1>
 
-  <p>Provide players and course data to see valid pairings.</p>
+  <h1>Greensomes Pairing Generator</h1>
 
-  <div id="app"></div>
+  <!-- STEP 1: PLAYERS -->
+  <div id="step1">
+    <h2>Step 1: Enter Players</h2>
+    <p>Enter 6 players with their exact handicaps (HI):</p>
+    <div id="players-container"></div>
+    <button id="to-step2">Next: Course Info →</button>
+  </div>
+
+  <!-- STEP 2: COURSE DATA -->
+  <div id="step2" class="hidden">
+    <h2>Step 2: Course Data</h2>
+    <p>Enter the course rating values:</p>
+
+    <div class="player-row">
+      <label>CR:</label>
+      <input type="number" id="cr" step="0.1">
+    </div>
+
+    <div class="player-row">
+      <label>SR:</label>
+      <input type="number" id="sr">
+    </div>
+
+    <div class="player-row">
+      <label>Par:</label>
+      <input type="number" id="par">
+    </div>
+
+    <button id="back-to-step1">← Back</button>
+    <button id="generate">Generate Pairings</button>
+  </div>
+
+  <!-- STEP 3: RESULTS -->
+  <div id="step3" class="hidden">
+    <h2>Step 3: Valid Greensomes Pairings</h2>
+    <div id="results"></div>
+    <button id="restart">Start Over</button>
+  </div>
 
   <script src="app.js"></script>
+  <script src="ui.js"></script>
+
 </body>
 </html>
