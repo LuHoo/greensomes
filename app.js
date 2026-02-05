@@ -186,3 +186,4 @@ validPairings.forEach((pairs, idx) => {
     console.log("Captain kan kiezen bij gelijke PH:", captainChoices);
   }
 });
+*/
