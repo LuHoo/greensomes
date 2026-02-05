@@ -36,6 +36,7 @@ class Pair {
   }
 }
 
+/*
 // -------------------------
 // 2. Validator
 // -------------------------
@@ -80,6 +81,7 @@ function isValidGreensomeSetup(players, pairs) {
 
   return false;
 }
+*/
 
 // -------------------------
 // 3. Pairings generator
